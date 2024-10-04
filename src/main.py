@@ -2,7 +2,7 @@
 main script
 """
 import os
-from argparse import ArgumentParser
+from argparse import ArgumentParser, Namespace
 import pandas as pd
 import gdown
 
@@ -24,7 +24,7 @@ from .model.gb_trainer import (
 from .model.stack_trainer import StackTrainer
 
 
-def parsing_args() -> ArgumentParser:
+def parsing_args() -> Namespace:
     """
     parse arguments
     """

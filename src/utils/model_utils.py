@@ -1,3 +1,6 @@
+"""
+utilities for modeling tasks
+"""
 from typing import Tuple
 from rich import print as rp
 import pandas as pd
@@ -20,6 +23,7 @@ def split(data: pd.DataFrame, label: str, test_size: float) -> Tuple:
 
     return train_x, train_y, test_x, test_y
 
+
 def feature_selection(data: pd.DataFrame, label: str) -> pd.DataFrame:
     """
     select features
@@ -34,6 +38,7 @@ def feature_selection(data: pd.DataFrame, label: str) -> pd.DataFrame:
         }
     )
     return feature_importances
+
 
 def metrics(y_true: pd.Series, y_pred: pd.Series) -> float:
     """
